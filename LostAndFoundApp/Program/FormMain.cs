@@ -43,7 +43,7 @@ namespace LostAndFoundApp
 
                 if (IsFindingFiltered(addedFinding))
                 {
-                    if (filteredByWord != null && addedFinding.Name.Contains(filteredByWord))
+                    if ((filteredByWord != null && addedFinding.Name.Contains(filteredByWord)) || filteredByWord == null)
                     {
                         lbFindings.Items.Add(addedFinding.Name);
                     }
